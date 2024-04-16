@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const rojoButton = document.querySelector("#buttonRojo");
+        const relojButton = document.querySelector("#buttonReloj");
+        const rectaButton = document.querySelector("#buttonRecta");
+        const ratonesButton = document.querySelector("#buttonRatones");
+        const ramasButton = document.querySelector("#buttonRamas");
+        const tierraButton = document.querySelector("#buttonTierra");
+        const margaritasButton = document.querySelector("#buttonMargaritas");
+        const floresButton = document.querySelector("#buttonFlores");
+        const escalerasButton = document.querySelector("#buttonEscaleras");
+        const naranjasButton = document.querySelector("#buttonNaranjas");
+        const murcielagoButton = document.querySelector("#buttonMurcielago");
+        const guirnaldaButton = document.querySelector("#buttonGuirnalda");
+        const armarioButton = document.querySelector("#buttonArmario");
+        const mermeladaButton = document.querySelector("#buttonMermelada");
+        const cuatroButton = document.querySelector("#buttonCuatro");
+        const enlaceImgRef = document.querySelector("#iRefLink");
+
+        /* boton rojo */
+
+        rojoButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/hidrante_de_agua.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.1 0.1 0.1");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.5 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Hidrante De Agua' by J.César Navarrete <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">R</a>ojo';
+          
+          console.log(
+            "Click boton rojo "
+          );
+        });
+
+        /* boton reloj */
+
+        relojButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/reloj_xd.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.5 0.5 0.5");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'reloj xd' by 0ppai <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">R</a>eloj';
+          
+          console.log(
+            "Click boton reloj "
+          );
+        });
+
+        /* boton recta */
+        
+        rectaButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/flecha.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.4 0.4 0.4");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Flecha' by cin.rvrauth <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">R</a>ecta';
+          
+          console.log(
+            "Click boton recta "
+          );
+        });
+
+        /* boton ratones */
+        
+        ratonesButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/mouse.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "3 3 3");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.2 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Mouse' by Christian Gentry <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">R</a>atones';
+          
+          console.log(
+            "Click boton ratones "
+          );
+        });
+
+        /* boton ramas */
+        
+        ramasButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/arbol_alexia.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "4 4 4");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.4 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Arbol Alexia' by alexia_lynn <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">R</a>amas';
+          
+          console.log(
+            "Click boton ramas "
+          );
+        });
+
+        /* boton tierra */
+        
+        tierraButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/tierra.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.15 0.15 0.15");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Tierra' by Sara Robisco <br>is licensed under Creative Commons Attribution-NonCommercial.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'Tie<a style="background-color: aqua">rr</a>a';
+          
+          console.log(
+            "Click boton tierra "
+          );
+        });
+
+        /* boton margaritas */
+        
+        margaritasButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/margarita_flower.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.6 0.6 0.6");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.5 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Margarita flower' by Maf'j Alvarez <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'Ma<a style="background-color: aqua">r</a>ga<c style="background-color: aqua">r</c>itas';
+          
+          console.log(
+            "Click boton margaritas "
+          );
+        });
+
+        /* boton flores */
+        
+        floresButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/jardin_flores-002.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.06 0.06 0.06");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Jardin_Flores-002' by Bruno_Urra <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'Flo<a style="background-color: aqua">r</a>es';
+          
+          console.log(
+            "Click boton flores "
+          );
+        });
+
+        /* boton escaleras */
+        
+        escalerasButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/escaleras.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.03 0.03 0.03");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.5 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Escaleras' by jaimerog <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'Escale<a style="background-color: aqua">r</a>as';
+          
+          console.log(
+            "Click boton escaleras "
+          );
+        });
+
+        /* boton naranjas */
+        
+        naranjasButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/naranjas.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.5 0.5 0.5");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Naranjas' by Elbolillo <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'Na<a style="background-color: aqua">r</a>anjas';
+          
+          console.log(
+            "Click boton naranjas "
+          );
+        });
+
+        /* boton murcielago */
+        
+        murcielagoButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/gorilla_tag_halloween_bat.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "9 9 9");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Gorilla Tag Halloween Bat' by KPMisParrot <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'Mu<a style="background-color: aqua">r</a>ciélago';
+          
+          console.log(
+            "Click boton murcielago "
+          );
+        });
+
+        /* boton guirnalda */
+        
+        guirnaldaButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/wreath.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.3 0.3 0.3");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Wreath' by aperkinsNorthernQuest <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'Gui<a style="background-color: aqua">r</a>nalda';
+          
+          console.log(
+            "Click boton guirnalda "
+          );
+        });
+
+        /* boton armario */
+        
+        armarioButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/armario.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.3 0.3 0.3");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.5 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Armário' by Victor_Nicolla <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'A<a style="background-color: aqua">r</a>ma<c style="background-color: aqua">r</c>io';
+          
+          console.log(
+            "Click boton armario "
+          );
+        });
+
+        /* boton mermelada */
+        
+        mermeladaButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/low_poly_jar.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.3 0.3 0.3");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.5 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Low poly jar' by Aya Dja <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'Me<a style="background-color: aqua">r</a>melada';
+          
+          console.log(
+            "Click boton mermelada "
+          );
+        });
+
+        /* boton cuatro */
+        
+        cuatroButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/3d_number_-_4_four.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "2 2 2");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'3D Number - 4 (FOUR)' by Jihambru <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'Cuat<a style="background-color: aqua">r</a>o';
+          
+          console.log(
+            "Click boton cuatro "
+          );
+        });
+
+        /*click enlace imagen de referencia*/
+
+        enlaceImgRef.addEventListener("click", ()=>{
+          document.getElementById("textoTutorial").innerHTML="";
+        });
+        
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <a-scene
+      mindar-image="imageTargetSrc: \targets.mind; maxTrack: 2"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      
+
+      <a-camera position="0 0 0" look-controls="enabled: true"></a-camera>
+
+      <div>
+        <button type="button" id="buttonRojo">Rojo</button>
+        <button type="button" id="buttonReloj">Reloj</button>
+        <button type="button" id="buttonRecta">Recta</button>
+        <button type="button" id="buttonRatones">Ratones</button>
+        <button type="button" id="buttonRamas">Ramas</button>
+        <button type="button" id="buttonTierra">Tierra</button>
+        <button type="button" id="buttonMargaritas">Margaritas</button>
+        <button type="button" id="buttonFlores">Flores</button>
+        <button type="button" id="buttonEscaleras">Escaleras</button>
+        <button type="button" id="buttonNaranjas">Naranjas</button>
+        <button type="button" id="buttonMurcielago">Murciélago</button>
+        <button type="button" id="buttonGuirnalda">Guirnalda</button>
+        <button type="button" id="buttonArmario">Armario</button>
+        <button type="button" id="buttonMermelada">Mermelada</button>
+        <button type="button" id="buttonCuatro">Cuatro</button>
+      </div>
+
+      <h1 class="textoCentral" id="textoTitulo">Bienvenidos a la realidad aumentada</h1>
+        
+      <div id="textoTutorial" class="textoTuto">
+        <h2>Esta experiencia le mostrará modelos en tres dimensiones referentes a cada palabra en los botones ↑, para poder verlos, debe posicionar la imagen de referencia frente a la cámara, puede mostrar la imagen desde la pantalla de su teléfono o de manera física imprimiéndola, descargue la imagen aquí:<a id="iRefLink" href="https://spanish-ova-funifelt.firebaseapp.com/img/Logo_Funifelt_Color.e6b55620.png" target="_blank"> Link a Imagen de Referencia</a> (Despues de clickear, este mensaje desaparecera)</h2>
+        <h2>Cuando tenga la imagen a su disposición, regrese y presione cualquier boton ↑, mientras muestra la imagen a la camara</h2>
+      </div>
+
+      <d id="textoAutor">Autor: N.N. Licencia: S.D. </d>
+      
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model
+          id="gltf-model"
+          rotation="0 0 0"
+          animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          src=""
+        ></a-gltf-model>
+      </a-entity>
+      
+      <img
+        style="display: flow; width: 200px; position: static; margin-top: 400px; left: 5px"
+        id="logo"
+        src="https://cdn.glitch.global/d1813f1f-6f24-4a64-82b9-08c79074fd56/8e22b0_475c1e4ca5614a2da3076a63068ccb39~mv2.png?v=1710802414575"
+      />
+
+    </a-scene>
+  </body>
+</html>
