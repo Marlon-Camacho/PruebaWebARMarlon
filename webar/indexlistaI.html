@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/funifelt.ico">
+    <title>Lista "I"-WebAR</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lluviaButton = document.querySelector("#buttonLLuvia");
+        const pieButton = document.querySelector("#buttonPie");
+        const palacioButton = document.querySelector("#buttonPalacio");
+        const ciudadanosButton = document.querySelector("#buttonCiudadanos");
+        const enlaceImgRef = document.querySelector("#iRefLinkI");
+
+        /* boton lluvia */
+
+        lluviaButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src", "./modelos/listaI/umbrella.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.5 0.5 0.5");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.3 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Umbrella' by Vera4Art <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'lluv<a style="background-color: aqua">ia</a>';
+          
+          console.log(
+            "Click boton lluvia "
+          );
+        });
+
+        /* boton pie */
+
+        pieButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaI/foot.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.08 0.08 0.08");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.3 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Foot' by mitch.harvey <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'p<a style="background-color: aqua">ie</a>';
+          
+          console.log(
+            "Click boton pie "
+          );
+        });
+
+        /* boton palacio */
+        
+        palacioButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaI/low_poly_castle.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.0006 0.0006 0.0006");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.2 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Low Poly Castle' by treymill33 <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'palac<a style="background-color: aqua">io</a>';
+          
+          console.log(
+            "Click boton palacio "
+          );
+        });
+
+        /* boton ciudadanos */
+        
+        ciudadanosButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaI/freebie_-_lowpoly_people.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.5 0.5 0.5");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "-0.4 -0.1 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Freebie - Lowpoly People' by Studio Ochi <br>is licensed under CC Attribution-NonCommercial-NoDerivs.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'c<a style="background-color: aqua">iu</a>dadanos';
+          
+          console.log(
+            "Click boton ciudadanos "
+          );
+        });
+
+        /*click enlace imagen de referencia*/
+
+        enlaceImgRef.addEventListener("click", ()=>{
+          document.getElementById("textoTutorial").innerHTML="";
+        });
+        
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <a-scene
+      mindar-image="imageTargetSrc: /qr (1).mind; maxTrack: 2"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      
+
+      <a-camera position="0 0 0" look-controls="enabled: true"></a-camera>
+
+      <div>
+        <button type="button" id="buttonLLuvia">lluvia</button>
+        <button type="button" id="buttonPie">pie</button>
+        <button type="button" id="buttonPalacio">palacio</button>
+        <button type="button" id="buttonCiudadanos">ciudadanos</button>
+      </div>
+
+      <h1 class="textoCentral" id="textoTitulo">Bienvenidos a la realidad aumentada<br>Unidad dos: Diptongo - Letra I</br></h1>
+        
+      <div id="textoTutorial" class="textoTuto">
+        <h2>Esta experiencia le mostrará modelos en tres dimensiones referentes a cada palabra en los botones ↑, para poder verlos, debe posicionar la imagen de referencia frente a la cámara, puede mostrar la imagen desde la pantalla de su teléfono o de manera física imprimiéndola, descargue la imagen aquí:<a id="iRefLinkI" href="https://firebasestorage.googleapis.com/v0/b/espanol-realidad-aumentada.appspot.com/o/referenciaImg.png?alt=media&token=3141630e-b973-4f49-817b-efcbb59ee926" target="_blank"> Link a Imagen de Referencia</a> (Despues de clickear, este mensaje desaparecera)</h2>
+        <h2>Cuando tenga la imagen a su disposición, regrese y presione cualquier boton ↑, mientras muestra la imagen a la camara</h2>
+      </div>
+
+      <d id="textoAutor">Autor: N.N. Licencia: S.D. </d>
+      
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model
+          id="gltf-model"
+          rotation="0 0 0"
+          animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          src=""
+        ></a-gltf-model>
+      </a-entity>
+      
+      <img
+        style="display: flow; width: 200px; position: static; margin-top: 400px; left: 5px"
+        id="logo"
+        src="https://cdn.glitch.global/d1813f1f-6f24-4a64-82b9-08c79074fd56/8e22b0_475c1e4ca5614a2da3076a63068ccb39~mv2.png?v=1710802414575"
+      />
+
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/funifelt.ico">
+    <title>Lista "U"-WebAR</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const aguaButton = document.querySelector("#buttonAgua");
+        const huesoButton = document.querySelector("#buttonHueso");
+        const ruidoButton = document.querySelector("#buttonRuido");
+        const antiguoButton = document.querySelector("#buttonAntiguo");
+        const cuyButton = document.querySelector("#buttonCuy");
+        const enlaceImgRef = document.querySelector("#iRefLinkI");
+
+        /* boton agua */
+
+        aguaButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src", "./modelos/listaU/water_drop.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.2 0.2 0.2");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.3 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Water Drop' by rangoon.tech <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'ag<a style="background-color: aqua">ua</a>';
+          
+          console.log(
+            "Click boton agua "
+          );
+        });
+
+        /* boton hueso */
+
+        huesoButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaU/bone.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.005 0.005 0.005");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.2 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Bone' by neutralize <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'h<a style="background-color: aqua">ue</a>so';
+          
+          console.log(
+            "Click boton hueso "
+          );
+        });
+
+        /* boton ruido */
+        
+        ruidoButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaU/scream.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.4 0.4 0.4");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.3 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Scream' by Damco <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'r<a style="background-color: aqua">ui</a>do';
+          
+          console.log(
+            "Click boton ruido "
+          );
+        });
+
+        /* boton antiguo */
+        
+        antiguoButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaU/egyptian_cat_figurine.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "7 7 7");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.2 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Egyptian cat figurine' by mvksxx <br>is licensed under CC Attribution-NonCommercial-ShareAlike.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'antig<a style="background-color: aqua">uo</a>';
+          
+          console.log(
+            "Click boton antiguo "
+          );
+        });
+
+        /* boton cuy */
+        
+        cuyButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaU/cuyr.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.3 0.3 0.3");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.1 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'CuyR' by selike <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'c<a style="background-color: aqua">uy</a>';
+          
+          console.log(
+            "Click boton cuy "
+          );
+        });
+
+        /*click enlace imagen de referencia*/
+
+        enlaceImgRef.addEventListener("click", ()=>{
+          document.getElementById("textoTutorial").innerHTML="";
+        });
+        
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <a-scene
+      mindar-image="imageTargetSrc: /qr (1).mind; maxTrack: 2"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      
+
+      <a-camera position="0 0 0" look-controls="enabled: true"></a-camera>
+
+      <div>
+        <button type="button" id="buttonAgua">agua</button>
+        <button type="button" id="buttonHueso">hueso</button>
+        <button type="button" id="buttonRuido">ruido</button>
+        <button type="button" id="buttonAntiguo">antiguo</button>
+        <button type="button" id="buttonCuy">cuy</button>
+      </div>
+
+      <h1 class="textoCentral" id="textoTitulo">Bienvenidos a la realidad aumentada<br>Unidad dos: Diptongo - Letra U</br></h1>
+        
+      <div id="textoTutorial" class="textoTuto">
+        <h2>Esta experiencia le mostrará modelos en tres dimensiones referentes a cada palabra en los botones ↑, para poder verlos, debe posicionar la imagen de referencia frente a la cámara, puede mostrar la imagen desde la pantalla de su teléfono o de manera física imprimiéndola, descargue la imagen aquí:<a id="iRefLinkI" href="https://firebasestorage.googleapis.com/v0/b/espanol-realidad-aumentada.appspot.com/o/referenciaImg.png?alt=media&token=3141630e-b973-4f49-817b-efcbb59ee926" target="_blank"> Link a Imagen de Referencia</a> (Despues de clickear, este mensaje desaparecera)</h2>
+        <h2>Cuando tenga la imagen a su disposición, regrese y presione cualquier boton ↑, mientras muestra la imagen a la camara</h2>
+      </div>
+
+      <d id="textoAutor">Autor: N.N. Licencia: S.D. </d>
+      
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model
+          id="gltf-model"
+          rotation="0 0 0"
+          animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          src=""
+        ></a-gltf-model>
+      </a-entity>
+      
+      <img
+        style="display: flow; width: 200px; position: static; margin-top: 400px; left: 5px"
+        id="logo"
+        src="https://cdn.glitch.global/d1813f1f-6f24-4a64-82b9-08c79074fd56/8e22b0_475c1e4ca5614a2da3076a63068ccb39~mv2.png?v=1710802414575"
+      />
+
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/funifelt.ico">
+    <title>Lista "O"-WebAR</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const oasisButton = document.querySelector("#buttonOasis");
+        const oesteButton = document.querySelector("#buttonOeste");
+        const boinaButton = document.querySelector("#buttonBoina");
+        const estadounidenseButton = document.querySelector("#buttonEstadounidense");
+        const hoyButton = document.querySelector("#buttonHoy");
+        const enlaceImgRef = document.querySelector("#iRefLinkI");
+
+        /* boton oasis */
+
+        oasisButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src", "./modelos/listaO/minimalistic_island.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.09 0.09 0.09");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.3 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Minimalistic island' by tsnyder0008 <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">oa</a>sis';
+          
+          console.log(
+            "Click boton oasis "
+          );
+        });
+
+        /* boton oeste */
+
+        oesteButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaO/low_poly_western_building_and_environment.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.3 0.3 0.3");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.2 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Low Poly Western Building and Environment' by mertkilic <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">oe</a>ste';
+          
+          console.log(
+            "Click boton oeste "
+          );
+        });
+
+        /* boton boina */
+        
+        boinaButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaO/aiadmirer_v2.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.02 0.02 0.02");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.4 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Aiadmirer V2' by Sweet_JP <br>is licensed under Creative Commons Attribution-NonCommercial.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'b<a style="background-color: aqua">oi</a>na';
+          
+          console.log(
+            "Click boton boina "
+          );
+        });
+
+        /* boton estadounidense */
+        
+        estadounidenseButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaO/moving_american_flag.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.003 0.003 0.003");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.2 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Moving American Flag' by Designed By Jonathan <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'Estad<a style="background-color: aqua">ou</a>nidense';
+          
+          console.log(
+            "Click boton estadounidense "
+          );
+        });
+
+        /* boton hoy */
+        
+        hoyButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaO/simple_calendar.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "7 7 7");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.3 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Simple Calendar' by rikugo.studio <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'h<a style="background-color: aqua">oy</a>';
+          
+          console.log(
+            "Click boton hoy "
+          );
+        });
+
+        /*click enlace imagen de referencia*/
+
+        enlaceImgRef.addEventListener("click", ()=>{
+          document.getElementById("textoTutorial").innerHTML="";
+        });
+        
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <a-scene
+      mindar-image="imageTargetSrc: /qr (1).mind; maxTrack: 2"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      
+
+      <a-camera position="0 0 0" look-controls="enabled: true"></a-camera>
+
+      <div>
+        <button type="button" id="buttonOasis">oasis</button>
+        <button type="button" id="buttonOeste">oeste</button>
+        <button type="button" id="buttonBoina">boina</button>
+        <button type="button" id="buttonEstadounidense">Estadounidense</button>
+        <button type="button" id="buttonHoy">hoy</button>
+      </div>
+
+      <h1 class="textoCentral" id="textoTitulo">Bienvenidos a la realidad aumentada<br>Unidad dos: Diptongo - Letra O</br></h1>
+        
+      <div id="textoTutorial" class="textoTuto">
+        <h2>Esta experiencia le mostrará modelos en tres dimensiones referentes a cada palabra en los botones ↑, para poder verlos, debe posicionar la imagen de referencia frente a la cámara, puede mostrar la imagen desde la pantalla de su teléfono o de manera física imprimiéndola, descargue la imagen aquí:<a id="iRefLinkI" href="https://firebasestorage.googleapis.com/v0/b/espanol-realidad-aumentada.appspot.com/o/referenciaImg.png?alt=media&token=3141630e-b973-4f49-817b-efcbb59ee926" target="_blank"> Link a Imagen de Referencia</a> (Despues de clickear, este mensaje desaparecera)</h2>
+        <h2>Cuando tenga la imagen a su disposición, regrese y presione cualquier boton ↑, mientras muestra la imagen a la camara</h2>
+      </div>
+
+      <d id="textoAutor">Autor: N.N. Licencia: S.D. </d>
+      
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model
+          id="gltf-model"
+          rotation="0 0 0"
+          animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          src=""
+        ></a-gltf-model>
+      </a-entity>
+      
+      <img
+        style="display: flow; width: 200px; position: static; margin-top: 400px; left: 5px"
+        id="logo"
+        src="https://cdn.glitch.global/d1813f1f-6f24-4a64-82b9-08c79074fd56/8e22b0_475c1e4ca5614a2da3076a63068ccb39~mv2.png?v=1710802414575"
+      />
+
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/funifelt.ico">
+    <title>Lista "A"-WebAR</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const aeroplanoButton = document.querySelector("#buttonAeroplano");
+        const aireButton = document.querySelector("#buttonAire");
+        const chaoButton = document.querySelector("#buttonChao");
+        const jaulaButton = document.querySelector("#buttonJaula");
+        const aycarayButton = document.querySelector("#buttonAyCaray");
+
+        const continuarButton = document.querySelector("#buttonContinuar");
+        const pasoIButton = document.querySelector("#buttonPasoI");
+        const pasoIIButton = document.querySelector("#buttonPasoII");
+
+        /* boton aeroplano */
+
+        aeroplanoButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src", "./modelos/listaA/curtiss_jn-4_jenny.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.3 0.3 0.3");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Curtiss JN-4 'Jenny'' by helijah <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">ae</a>roplano';
+          
+          console.log(
+            "Click boton aeroplano "
+          );
+        });
+
+        /* boton aire */
+
+        aireButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaA/mill-wind.glb"
+            );
+            document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.2 0.2 0.2");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Mill-wind' by Pixel <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">ai</a>re';
+          
+          console.log(
+            "Click boton aire "
+          );
+        });
+
+        /* boton chao */
+        
+        chaoButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaA/bmo.glb"
+            );
+            document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.1 0.1 0.1");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'BMO' by Pizzaz <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = '¡ch<a style="background-color: aqua">ao</a>!';
+          
+          console.log(
+            "Click boton chao "
+          );
+        });
+
+        /* boton jaula */
+        
+        jaulaButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaA/the_bird_cage.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.06 0.06 0.06");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.8 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'The Bird Cage' by Pointveteran <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'j<a style="background-color: aqua">au</a>la';
+          
+          console.log(
+            "Click boton jaula "
+          );
+        });
+
+        /* boton aycaray */
+        
+        aycarayButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaA/bart_simpson.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "1 1 1");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.5 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Bart Simpson' by Melco007 <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = '¡<a style="background-color: aqua">ay</a>, car<a style="background-color: aqua">ay</a>!';
+          
+          console.log(
+            "Click boton aycaray "
+          );
+        });
+
+        /*botones tutorial*/
+
+        pasoIButton.addEventListener("click", ()=>{
+          document.getElementById("divBotones").setAttribute("style","background-color: ;");
+          document.getElementById("textoT").innerHTML="descargue el código QR: <a class='enlace' href='https://firebasestorage.googleapis.com/v0/b/espanol-realidad-aumentada.appspot.com/o/referenciaImg.png?alt=media&token=3141630e-b973-4f49-817b-efcbb59ee926' target='_blank'>   Codigo QR   </a><br></br>O utilice la tarjeta física para proyectarlo en el recuadro que aparece en su pantalla.";
+        });
+
+        pasoIIButton.addEventListener("click", ()=>{
+          document.getElementById("divBotones").setAttribute("style","background-color: #92B8B4; border-radius: 10px; padding: 5px;");
+          document.getElementById("textoT").innerHTML="Luego presione los botones ↑↑ y podrá ver cada una de las palabras.";
+        });
+
+        continuarButton.addEventListener("click", ()=>{
+          document.getElementById("divBotones").setAttribute("style","background-color: ;");
+          document.getElementById("textoTutorial").innerHTML="";
+          document.getElementById("textoTutorial").setAttribute("style","padding: 0;");
+          console.log("click paso 3"); 
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <a-scene
+      mindar-image="imageTargetSrc: /qr (1).mind; maxTrack: 2; uiScanning:yes"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+      style="display: initial;"
+    >
+      
+
+      <a-camera position="0 0 0" look-controls="enabled: true"></a-camera>
+
+      <div id="divBotones">
+        <button type="button" id="buttonAeroplano">aeroplano</button>
+        <button type="button" id="buttonAire">aire</button>
+        <button type="button" id="buttonChao">¡chao!</button>
+        <button type="button" id="buttonJaula">jaula</button>
+        <button type="button" id="buttonAyCaray">¡ay, caray!</button>
+      </div>
+
+      <h1 class="textoCentral" id="textoTitulo">Bienvenidos a la realidad aumentada<br>Unidad dos: Diptongo - Letra A</br></h1>
+        
+      <div id="textoTutorial" class="textoTuto">
+        
+        <h2 id="textoT">Esta experiencia de realidad aumentada le permitirá aprender visualmente vocabulario ↑↑ <br>siga las instrucciones a continuación: ⬇️</br></h2>
+        
+        <button class="buttonPasos" id="buttonPasoI" type="button">Paso 1</button>
+        <button class="buttonPasos" id="buttonPasoII" type="button">Paso 2</button>
+        <button class="buttonPasos" id="buttonContinuar" type="button">¡Continuar!</button>
+      </div>
+
+      <d id="textoAutor">Autor: N.N. Licencia: S.D. </d>
+      
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model
+          id="gltf-model"
+          rotation="0 0 0"
+          animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          src=""
+        ></a-gltf-model>
+      </a-entity>
+      
+      <img
+        style="display: flow; width: 200px; position: static; margin-top: 400px; left: 5px"
+        id="logo"
+        src="https://cdn.glitch.global/d1813f1f-6f24-4a64-82b9-08c79074fd56/8e22b0_475c1e4ca5614a2da3076a63068ccb39~mv2.png?v=1710802414575"
+      />
+
+    </a-scene>
+  </body>
+</html>

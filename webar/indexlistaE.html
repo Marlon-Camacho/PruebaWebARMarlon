@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/funifelt.ico">
+    <title>Lista "E"-WebAR</title>
+    <!-- Importe de la libreria MindAR y el framework A-frame -->
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        /*Enlace de los botones creados sobre la escena y sus acciones,
+        utilizando el id definido y la creación de const. para cada boton*/
+        const cerealButton = document.querySelector("#buttonCereal");
+        /*const palabraButton = document.querySelector('#id_Del_Boton_Dado_en_la_escena_↓↓↓')*/
+        const peineButton = document.querySelector("#buttonPeine");
+        const boxeoButton = document.querySelector("#buttonBoxeo");
+        const europaButton = document.querySelector("#buttonEuropa");
+        const reyButton = document.querySelector("#buttonRey");
+        const enlaceImgRef = document.querySelector("#iRefLinkI");
+
+        /* boton cereal,
+        Se definen las acciones a ejecutar al cliquear el boton de la palabra*/
+
+        cerealButton.addEventListener("click", () => {
+            /*Se hace el cambio (.setAttribute()) del modelo que se visualiza al
+            mostrar la imagen de referencia frente a la camara ↙*/
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src", "./modelos/listaE/cereal_box.glb"
+            );
+            /*Se configuran caracteristicas de visualización del modelo 3d,
+            se captura el id del modelo ("gltf-model"), y se redefine
+            "scale" que se refiere al tamaño del modelo al respecto de la imagen
+            de referencia.
+            "position" que se refiere a la posición de aparición del modelo en
+            relación con el punto central de la imagen de referencia.*/
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.7 0.7 0.7");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.5 0");
+
+            /*Se cambian los textos complementarios,
+            el titulo ("textoTitulo"), cambia por la palabra referente (cereal)
+            y el autor ("textoAutor"), cambia por el autor y la licencia
+            del modelo respectivo (Jose Luis - Creative Commons Att.)*/
+            document.getElementById("textoAutor").innerHTML = "'Cereal box' by Jose Luis <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'cer<a style="background-color: aqua">ea</a>l';
+          
+          console.log(
+            /*texto de comprobación del cliqueo del boton*/
+            "Click boton cereal "
+          );
+        });
+
+        /* boton peine */
+
+        peineButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaE/Comb1OBJ.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.1 0.1 0.1");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "-0.5 0 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Peine modelo 3d' is licensed under TurboSquid 3D Model License<br>© 2021 Bob Hidalgo.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = 'p<a style="background-color: aqua">ei</a>ne';
+          
+          console.log(
+            "Click boton peine "
+          );
+        });
+
+        /* boton boxeo */
+        
+        boxeoButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaE/little_mac_-_smash_bros_brawl.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.1 0.1 0.1");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.5 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'Little Mac - Smash Bros Brawl' by sportzdad13 <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'box<a style="background-color: aqua">eo</a>';
+          
+          console.log(
+            "Click boton boxeo "
+          );
+        });
+
+        /* boton europa */
+        
+        europaButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaE/european_union_map.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.008 0.008 0.008");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.3 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'European Union Map' by Carlos.Maciel <br>is licensed under Creative Commons Attribution.</br>";
+
+            document.getElementById("textoTitulo").innerHTML = '<a style="background-color: aqua">Eu</a>ropa';
+          
+          console.log(
+            "Click boton europa "
+          );
+        });
+
+        /* boton rey */
+        
+        reyButton.addEventListener("click", () => {
+          document
+            .getElementById("gltf-model")
+            .setAttribute(
+              "src",
+              "./modelos/listaE/king_crown.glb"
+            );
+          document
+            .getElementById("gltf-model")
+            .setAttribute("scale", "0.8 0.8 0.8");
+          document
+            .getElementById("gltf-model")
+            .setAttribute("position", "0 -0.2 0");
+          
+            document.getElementById("textoAutor").innerHTML = "'King Crown' by marekc <br>is licensed under Creative Commons Attribution.</br>";
+          
+            document.getElementById("textoTitulo").innerHTML = 'r<a style="background-color: aqua">ey</a>';
+          
+          console.log(
+            "Click boton rey "
+          );
+        });
+
+        /*click enlace imagen de referencia,
+        se captura el cliqueo del enlace a la imagen de referencia
+        para eliminar de la pantalla el texto de como manejar la WebAR ("textoTutorial")*/
+
+        enlaceImgRef.addEventListener("click", ()=>{
+          document.getElementById("textoTutorial").innerHTML="";
+        });
+        
+      });
+    </script>
+  </head>
+  <body>
+
+    <!-- Se crea la escena (<a-scene>), sobre la que se ubicara 
+        la camara (<a-camara>) y los modelos <a-entity>
+        mindar-image, se refiere a la imagen de referencia
+        que sera utilizada en la escena.
+        vr-mode-ui, se refiere a la interfaz de acceso a la funcionalidad
+        de realidad virtual en nuestro caso se inhabilita.
+        device-orientation-permission-ui, mas configuraciones de realidad 
+        virtual que en nuestro caso es innecesario pero se debe inhabilitar
+        por la configuración que tienen por default-->
+
+    <a-scene
+    
+      mindar-image="imageTargetSrc: /qr (1).mind; maxTrack: 2"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      <!--Se crea y se ubica la camara, look.controls, habilita el control
+    sobre la camara lo que permite mover el modelo sobre la escena mientras
+    la imagen de referencia se encuentre frente a ella.
+    Se crean los botones y los textos complementarios que seran alterados
+    segun el flujo de uso de la WebAR.
+    Finalmente, se crea la entidad a visualizar (<a-entity>)
+        mindar-image-target, define un id al modelo que lo enlaza a la imagen de ref.
+        esta entidad, dispondra de id, para facilitar el cambio por cada boton;
+        rotation, que permite rotar el modelo al momento de visualizarlo
+        animation, para otorgar una animación en este caso el giro constante
+        position, posición del modelo respecto a la imagen de referencia
+        scale, tamaño del modelo         //              //            
+        src, ubicación del fichero 3d en formato (.glb) del modelo a visualizar
+    Todos seran alterados durante el uso de la webar, segun el boton cliqueado-->
+
+      <a-camera position="0 0 0" look-controls="enabled: true"></a-camera>
+
+      <div>
+        <button type="button" id="buttonCereal">cereal</button>
+        <button type="button" id="buttonPeine">peine</button>
+        <button type="button" id="buttonBoxeo">boxeo</button>
+        <button type="button" id="buttonEuropa">Europa</button>
+        <button type="button" id="buttonRey">rey</button>
+      </div>
+
+      <h1 class="textoCentral" id="textoTitulo">Bienvenidos a la realidad aumentada<br>Unidad dos: Diptongo - Letra E</br></h1>
+        
+      <div id="textoTutorial" class="textoTuto">
+        <h2>Esta experiencia le mostrará modelos en tres dimensiones referentes a cada palabra en los botones ↑, para poder verlos, debe posicionar la imagen de referencia frente a la cámara, puede mostrar la imagen desde la pantalla de su teléfono o de manera física imprimiéndola, descargue la imagen aquí:<a id="iRefLinkI" href="https://firebasestorage.googleapis.com/v0/b/espanol-realidad-aumentada.appspot.com/o/referenciaImg.png?alt=media&token=3141630e-b973-4f49-817b-efcbb59ee926" target="_blank"> Link a Imagen de Referencia</a> (Despues de clickear, este mensaje desaparecera)</h2>
+        <h2>Cuando tenga la imagen a su disposición, regrese y presione cualquier boton ↑, mientras muestra la imagen a la camara</h2>
+      </div>
+
+      <d id="textoAutor">Autor: N.N. Licencia: S.D. </d>
+      
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model
+          id="gltf-model"
+          rotation="0 0 0"
+          animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          src=""
+        ></a-gltf-model>
+      </a-entity>
+      
+      <img
+        style="display: flow; width: 200px; position: static; margin-top: 400px; left: 5px"
+        id="logo"
+        src="https://cdn.glitch.global/d1813f1f-6f24-4a64-82b9-08c79074fd56/8e22b0_475c1e4ca5614a2da3076a63068ccb39~mv2.png?v=1710802414575"
+      />
+
+    </a-scene>
+  </body>
+</html>
